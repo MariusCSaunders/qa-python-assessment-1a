@@ -83,6 +83,9 @@ def one(input1, input2):
 def two(input):
     
     searchMe = "bert"
+    s = input.lower()
+
+    return s[s.find(searchMe)+len(searchMe):s.rfind(searchMe)]
 
 
 
@@ -317,11 +320,6 @@ def nine(inputString, char):
     else:
         return res + 1 
     
-    
-    
-
-print(nine("Fridge for sale","z"))
-
 
     # <QUESTION 10>
 
@@ -341,4 +339,13 @@ print(nine("Fridge for sale","z"))
     # How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
 
 def ten(string, int, char):
-    pass
+    
+    string.lower()
+
+    for x in range(0, len(string)-1):
+        if string[x] == char:
+            return True
+        else:
+            return False
+
+print(ten("The",2,"h"))
