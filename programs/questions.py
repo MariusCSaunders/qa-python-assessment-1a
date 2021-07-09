@@ -120,7 +120,7 @@ def three(arg1):
 
     # <QUESTION 4>
 
-    # Given a string seperate the string into the individual numbers present, then add each digit of each number to get a final value for each number
+    # Given a string, seperate the string into the individual numbers present, then add each digit of each number to get a final value for each number
 
     # String example = "55 72 86"
 
@@ -141,9 +141,23 @@ def three(arg1):
     # help(int) for working with numbers and help(str) for working with Strings
 
 def four(arg1):
-    pass
+    
+    numbers = arg1.split()
+    map_numbers = map(int, numbers)
+    list_of_numbers = list(map_numbers)
 
+    results = []
 
+    for index in list_of_numbers:
+        sum = 0
+        for digit in str(index):
+            sum += int(digit)
+        results.append(sum)
+
+    results.sort()
+
+    return results[-1]
+    
     # <QUESTION 5>
 
     # Given a large string that represents a csv, the structure of each record will be as follows:
