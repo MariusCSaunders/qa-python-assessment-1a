@@ -53,7 +53,7 @@ def one(input1, input2):
     
     return output
 
-print(one("hi","hello"))
+
 
 
     # <QUESTION 2>
@@ -79,7 +79,10 @@ print(one("hi","hello"))
     # Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def two(input):
-    pass
+    
+    searchMe = "bert"
+
+
 
 
     # <QUESTION 3>
@@ -102,7 +105,17 @@ def two(input):
     # No Hints for this question
 
 def three(arg1):
-    pass
+
+
+    if arg1 % 3 == 0 and arg1 % 5 == 0:
+        return "fizzbuzz"
+    elif arg1 % 3 == 0:
+        return "fizz"
+    elif arg1 % 10 == 0:
+        return "buzz"
+    else:
+        return "null"
+
 
 
     # <QUESTION 4>
@@ -125,7 +138,7 @@ def three(arg1):
 
     # <HINT>
 
-    # help(int) for working with numbers and help(str) for working with Strings.
+    # help(int) for working with numbers and help(str) for working with Strings
 
 def four(arg1):
     pass
