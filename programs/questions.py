@@ -1,3 +1,4 @@
+import re
     # INSTRUCTIONS
 
     # In case it is not clear, the Question appears first, then examples, then any hints and finally the function that you need to complete appears underneath:
@@ -184,12 +185,31 @@ def four(arg1):
     # help(str) and help(list), you might also need to use a function that can create a list of numbers for you, try help(range).
 
 def five(input):
-    pass
+    
+    pass 
+    record = []
+    rec = input.split(",")
+    record = list(rec)
+    len_record = len(record)
 
+    
+
+    if len_record == 4:
+        if record[2] == "False":
+            print()
+    elif len_record > 4:
+        num_rec = len_record / 4
+        
+
+       
+
+    return record
+
+#print(five("Bert,numberGen.py,True,1447,Bert,integers.py,True,1318,Jeff,floats.py,False,1445"))
 
     # <QUESTION 6>
 
-    # There is a well known mnemonic which goes "I before E, except after C", which is used to determine which order "ei" or "ie" should be in a word.
+    # There is a well known mnemonic which goes "I before E, except after C", which is used to determine which order "ei" or "ie" should be in a input.
 
     # Write a function which returns the boolean True if a string follows the mnemonic, and returns the boolean False if not.
 
@@ -205,7 +225,23 @@ def five(input):
     # Step through the logic here in order to solve the problem, you may find help(range) helpful.
 
 def six(input):
-    pass
+
+    if input.find('ei') == -1 and input.find('ie') == -1:
+        return True
+
+    for m in re.finditer('ei',input):
+
+        if m.start() == 0 or input[m.start() - 1] != 'c':
+            return False
+
+    for m in re.finditer('ie',input):
+
+        if m.start() == 0 or input[m.start() - 1] == 'c':
+            return False
+
+    return True
+        
+print(six("height")) 
 
 
     # <QUESTION 7>
