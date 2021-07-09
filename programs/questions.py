@@ -307,7 +307,20 @@ def eight(input):
     # Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-    pass
+    
+    string = inputString.replace(" ", "")
+
+    res = string.find(char)
+
+    if res == -1:
+        return res
+    else:
+        return res + 1 
+    
+    
+    
+
+print(nine("Fridge for sale","z"))
 
 
     # <QUESTION 10>
