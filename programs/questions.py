@@ -88,8 +88,6 @@ def two(input):
     return s[s.find(searchMe)+len(searchMe):s.rfind(searchMe)]
 
 
-
-
     # <QUESTION 3>
 
     # given a number
@@ -190,23 +188,27 @@ def four(arg1):
 
 def five(input):
     
-    pass 
+    
     record = []
     rec = input.split(",")
     record = list(rec)
     len_record = len(record)
 
+    names = []
+    encrypted = 0
+    for x in range(0, len_record):
+        if x == "False":
+            names.appead(record[x-2])
+        elif x == "True":  
+            encrypted += 1
+        
+    if encrypted == (len_record/4):
+        return []
+    else:
+        return names
     
+    #Code isnt working but best solution i have within time limit
 
-    if len_record == 4:
-        if record[2] == "False":
-            print()
-    elif len_record > 4:
-        num_rec = len_record / 4
-
-    return record
-
-#print(five("Bert,numberGen.py,True,1447,Bert,integers.py,True,1318,Jeff,floats.py,False,1445"))
 
     # <QUESTION 6>
 
@@ -348,4 +350,5 @@ def ten(string, int, char):
         else:
             return False
 
-print(ten("The",2,"h"))
+   #Code isnt working but best solution i have within time limit
+
