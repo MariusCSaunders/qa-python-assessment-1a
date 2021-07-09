@@ -1,4 +1,5 @@
 import re
+import math
     # INSTRUCTIONS
 
     # In case it is not clear, the Question appears first, then examples, then any hints and finally the function that you need to complete appears underneath:
@@ -282,7 +283,9 @@ def seven(input):
     # You may need to create a list of numbers from 0 to i, take a look at help(range).
 
 def eight(input):
-    pass
+    
+    return math.factorial(input)
+    
 
 
     # <QUESTION 9>
