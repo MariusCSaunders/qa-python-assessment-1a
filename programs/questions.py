@@ -199,9 +199,6 @@ def five(input):
             print()
     elif len_record > 4:
         num_rec = len_record / 4
-        
-
-       
 
     return record
 
@@ -241,7 +238,7 @@ def six(input):
 
     return True
         
-print(six("height")) 
+ 
 
 
     # <QUESTION 7>
@@ -259,8 +256,15 @@ print(six("height"))
     # How do we ignore case in a String? help(str) may offer some insight.
 
 def seven(input):
-    pass
+    
+    num_vowels=0
+    for char in input:
+        if char in "aeiouAEIOU":
 
+           num_vowels = num_vowels+1
+
+
+    return num_vowels
 
     # <QUESTION 8>
 
